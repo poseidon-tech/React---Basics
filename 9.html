@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <h1>this is react thru cdn</h1>
+        <div id="root"></div>
+        <script type="text/babel">
+            function Var1(props)
+            {   
+                console.log(props)
+                return(<h1>This is a {props.name} tag in var1 component</h1>);
+            }
+            function Var2(props)
+            {   
+                console.log(props)
+                return(<h1>This is a {props.name} tag in var2 component</h1>);
+            }
+            function Var3(props)
+            {   
+                console.log(props)
+                return(<h1>todays date is {props.date}</h1>);
+            }
+            function App(props)
+            {
+                console.log(props)
+                return(
+                    <div>
+                    <Var1 name="header"/>
+                    <Var2 name="paragraph"/>
+                    <Var3 date={new Date().getFullYear()}/>
+                    </div>
+                )
+            }
+            ReactDOM.render(<App/>,document.getElementById("root"));
+        </script>
+    </body>
+</html>
+<!--
+    we can send number only in {} using props
+-->

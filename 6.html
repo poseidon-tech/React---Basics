@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <h1>this is react thru cdn</h1>
+        <div id="root"></div>
+        <script type="text/babel">
+            let var2 = document.getElementById("root");
+            function Var1()
+            {
+                return(<h1>This is a header tag in var1 component</h1>);
+            }
+            ReactDOM.render(<Var1/>,var2);
+        </script>
+    </body>
+</html>

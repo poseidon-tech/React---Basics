@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <h1>this is react thru cdn</h1>
+        <div id="root"></div>
+        <script type="text/babel">
+            function Items(props)
+            {   
+                console.log(props.items)
+                return( 
+                    <div>
+                        {props.items.map((item) => (    
+                        <h1 key={item.id}>This is {item.title}</h1>
+                        )
+                        )
+                        }
+                    </div>
+                )
+            }
+            
+
+            let items = ["item1","item2","item3","item4"]
+            let itemObj = items.map((item, i) => ({ id: i, title: item }));
+            function App(props)
+            {
+                console.log(props)
+                return(
+                    
+                    <Items items = {itemObj}/>
+                    
+                )
+            }
+            ReactDOM.render(<App/>,document.getElementById("root"));
+        </script>
+    </body>
+</html>
+<!--
+  keys help to keep data in sync
+  we can use <React.Fragment></React.Fragment> insted of <div></div> does not show up in DOM
+-->

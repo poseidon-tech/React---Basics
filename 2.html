@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    </head>
+    <body>
+        <h1>this is react thru cdn</h1>
+        <div id="root"></div>
+        <script>
+            let var1 = React.createElement("h1",null,"this is react thru cdn!!!");
+            let var2 = document.getElementById("root");
+            ReactDOM.render(var1,var2);
+        </script>
+    </body>
+</html>

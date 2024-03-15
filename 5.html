@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <h1>this is react thru cdn</h1>
+        <div id="root"></div>
+        <script type="text/babel">
+            let var2 = document.getElementById("root");
+            let one="one";
+            let two="two";
+            let three="three";
+            let four="four";
+            ReactDOM.render(<ul><li>{one}</li><li>{two}</li><li>{three}</li><li>{four.toUpperCase()}</li></ul>,var2);
+        </script>
+    </body>
+</html>
